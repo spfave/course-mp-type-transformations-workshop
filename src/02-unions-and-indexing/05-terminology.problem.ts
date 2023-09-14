@@ -8,6 +8,7 @@
  * Which is which?
  */
 
+// discriminated union: union type of objects with a consistent property to discern difference on
 type A =
   | {
       type: "a";
@@ -22,8 +23,10 @@ type A =
       c: string;
     };
 
+// union: types separated by pipe "|" symbol
 type B = "a" | "b" | "c";
 
+// enum: uses 'enum' keyword
 enum C {
   A = "a",
   B = "b",
