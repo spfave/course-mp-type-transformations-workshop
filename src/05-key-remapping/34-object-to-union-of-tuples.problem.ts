@@ -8,7 +8,8 @@ interface Values {
 
 type ValuesAsUnionOfTuples = {
   [K in keyof Values]: [K, Values[K]];
-};
+}[keyof Values];
+// type test = ValuesAsUnionOfTuples[keyof ValuesAsUnionOfTuples];
 
 type tests = [
   Expect<
